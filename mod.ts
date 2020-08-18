@@ -1,4 +1,5 @@
 import home_dir from "./home_dir/mod.ts";
+import cache_dir from "./cache_dir/mod.ts";
 
 export type DirKind =
   | "home"
@@ -167,6 +168,8 @@ export default function dir(kind: DirKind): string | null {
   switch (kind) {
     case "home":
       return home_dir();
+    case "cache":
+      return cache_dir();
     default:
       return null;
   }

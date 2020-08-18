@@ -12,8 +12,12 @@ Returns the user and platform specific directories.
 ## Usage
 
 ```ts
-import { dir } from "https://deno.land/x/dir/mod.ts";
+import dir from "https://deno.land/x/dir/mod.ts";
 const homeDirectory = dir("home");
+
+// or
+import home_dir from "https://deno.land/x/home_dir/mod.ts";
+const homeDirectory = home_dir();
 ```
 
 Requires `allow-env` permission.
