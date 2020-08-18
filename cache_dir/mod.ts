@@ -12,8 +12,8 @@
 export default function cache_dir(): string | null {
   switch (Deno.build.os) {
     case "linux": {
-      const cache_home = Deno.env.get("XDG_CACHE_HOME");
-      if (cache_home) return cache_home;
+      const xdg = Deno.env.get("XDG_CACHE_HOME");
+      if (xdg) return xdg;
 
       const home = Deno.env.get("HOME");
       if (home) return `${home}/.cache`;
