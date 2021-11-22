@@ -25,8 +25,10 @@ Requires `allow-env` permission.
 Returns `null` if there is no applicable directory or if any other error
 occurs.
 
-Argument values: `"home"`, `"cache"`, `"config"`, `"executable"`, `"data"`,
-`"data_local"`, `"audio"`, `"desktop"`, `"document"`, `"download"`,
+Argument values: `"home"`, `"cache"`, `"config"`, `"download"`,
+
+Not yet implemented: `"executable"`, `"data"`,
+`"data_local"`, `"audio"`, `"desktop"`, `"document"`
 `"font"`, `"picture"`, `"public"`, `"template"`, `"tmp"`, `"video"`
 
 `"home"`
@@ -35,7 +37,7 @@ Argument values: `"home"`, `"cache"`, `"config"`, `"executable"`, `"data"`,
 | ------- | -----------------------------------------| -----------------------|
 | Linux   | `$HOME`                                  | /home/justjavac        |
 | macOS   | `$HOME`                                  | /Users/justjavac       |
-| Windows | `{FOLDERID_Profile}`                     | C:\Users\justjavac     |
+| Windows | `$USERPROFILE`                           | C:\Users\justjavac     |
 
 `"cache"`
 
@@ -43,7 +45,7 @@ Argument values: `"home"`, `"cache"`, `"config"`, `"executable"`, `"data"`,
 | ------- | ----------------------------------- | -------------------------------- |
 | Linux   | `$XDG_CACHE_HOME` or `$HOME`/.cache | /home/justjavac/.cache           |
 | macOS   | `$HOME`/Library/Caches              | /Users/justjavac/Library/Caches  |
-| Windows | `{FOLDERID_LocalAppData}`           | C:\Users\justjavac\AppData\Local |
+| Windows | `$LOCALAPPDATA`                     | C:\Users\justjavac\AppData\Local |
 
 `"config"`
 
@@ -51,7 +53,7 @@ Argument values: `"home"`, `"cache"`, `"config"`, `"executable"`, `"data"`,
 | ------- | ------------------------------------- | ------------------------------------ |
 | Linux   | `$XDG_CONFIG_HOME` or `$HOME`/.config | /home/justjavac/.config              |
 | macOS   | `$HOME`/Library/Preferences           | /Users/justjavac/Library/Preferences |
-| Windows | `{FOLDERID_RoamingAppData}`           | C:\Users\justjavac\AppData\Roaming   |
+| Windows | `$APPDATA`                            | C:\Users\justjavac\AppData\Roaming   |
 
 `"executable"`
 
@@ -103,11 +105,11 @@ Argument values: `"home"`, `"cache"`, `"config"`, `"executable"`, `"data"`,
 
 `"download"`
 
-|Platform | Value                  | Example                      |
-| ------- | ---------------------- | ---------------------------- |
-| Linux   | `XDG_DOWNLOAD_DIR`     | /home/justjavac/Downloads    |
-| macOS   | `$HOME`/Downloads      | /Users/justjavac/Downloads   |
-| Windows | `{FOLDERID_Downloads}` | C:\Users\justjavac\Downloads |
+|Platform | Value                    | Example                      |
+| ------- | ------------------------ | ---------------------------- |
+| Linux   | `XDG_DOWNLOAD_DIR`       | /home/justjavac/Downloads    |
+| macOS   | `$HOME`/Downloads        | /Users/justjavac/Downloads   |
+| Windows | `$USERPROFILE`\Downloads | C:\Users\justjavac\Downloads |
 
 `"font"`
 

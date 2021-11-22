@@ -1,23 +1,26 @@
 import home_dir from "./home_dir/mod.ts";
 import cache_dir from "./cache_dir/mod.ts";
+import config_dir from "./config_dir/mod.ts";
+import download_dir from "./download_dir/mod.ts";
 
 export type DirKind =
   | "home"
   | "cache"
   | "config"
-  | "executable"
-  | "data"
-  | "data_local"
-  | "audio"
-  | "desktop"
-  | "document"
-  | "download"
-  | "font"
-  | "picture"
-  | "public"
-  | "template"
-  | "tmp"
-  | "video";
+  | "download";
+
+// | "executable"
+// | "data"
+// | "data_local"
+// | "audio"
+// | "desktop"
+// | "document"
+// | "font"
+// | "picture"
+// | "public"
+// | "template"
+// | "tmp"
+// | "video";
 
 /** Returns the user and platform specific directories.
  *
@@ -31,9 +34,7 @@ export type DirKind =
  * Returns `null` if there is no applicable directory or if any other error
  * occurs.
  *
- * Argument values: `"home"`, `"cache"`, `"config"`, `"executable"`, `"data"`,
- * `"data_local"`, `"audio"`, `"desktop"`, `"document"`, `"download"`,
- * `"font"`, `"picture"`, `"public"`, `"template"`, `"tmp"`, `"video"`
+ * Argument values: `"home"`, `"cache"`, `"config"`, `"download"`,
  *
  * `"home"`
  *
@@ -162,7 +163,6 @@ export type DirKind =
  * | Linux   | `XDG_VIDEOS_DIR`    | /home/justjavac/Videos    |
  * | macOS   | `$HOME`/Movies      | /Users/justjavac/Movies   |
  * | Windows | `{FOLDERID_Videos}` | C:\Users\justjavac\Videos |
- *
  */
 export default function dir(kind: DirKind): string | null {
   switch (kind) {
@@ -170,6 +170,10 @@ export default function dir(kind: DirKind): string | null {
       return home_dir();
     case "cache":
       return cache_dir();
+    case "config":
+      return config_dir();
+    case "download":
+      return download_dir();
     default:
       return null;
   }

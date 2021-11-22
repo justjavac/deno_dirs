@@ -7,7 +7,7 @@
  * | ------- | ----------------------------------- | -------------------------------- |
  * | Linux   | `$XDG_CACHE_HOME` or `$HOME`/.cache | /home/justjavac/.cache           |
  * | macOS   | `$HOME`/Library/Caches              | /Users/justjavac/Library/Caches  |
- * | Windows | `{FOLDERID_LocalAppData}`           | C:\Users\justjavac\AppData\Local |
+ * | Windows | `$LOCALAPPDATA`                    | C:\Users\justjavac\AppData\Local |
  */
 export default function cache_dir(): string | null {
   switch (Deno.build.os) {
@@ -27,7 +27,7 @@ export default function cache_dir(): string | null {
     }
 
     case "windows":
-      return Deno.env.get("FOLDERID_LocalAppData") ?? null;
+      return Deno.env.get("LOCALAPPDATA") ?? null;
   }
 
   return null;

@@ -9,7 +9,7 @@ containing a value from the following table, or `null`.
 | ------- | ------------------------------------- | ------------------------------------ |
 | Linux   | `$XDG_CONFIG_HOME` or `$HOME`/.config | /home/justjavac/.config              |
 | macOS   | `$HOME`/Library/Preferences           | /Users/justjavac/Library/Preferences |
-| Windows | `{FOLDERID_RoamingAppData}`           | C:\Users\justjavac\AppData\Roaming   |
+| Windows | `$APPDATA`                            | C:\Users\justjavac\AppData\Roaming   |
 
 ## Usage
 
