@@ -9,7 +9,7 @@ containing a value from the following table, or `null`.
 | ------- | ----------------------------------- | -------------------------------- |
 | Linux   | `$XDG_CACHE_HOME` or `$HOME`/.cache | /home/justjavac/.cache           |
 | macOS   | `$HOME`/Library/Caches              | /Users/justjavac/Library/Caches  |
-| Windows | `{FOLDERID_LocalAppData}`           | C:\Users\justjavac\AppData\Local |
+| Windows | `$LOCALAPPDATA`                     | C:\Users\justjavac\AppData\Local |
 
 ## Usage
 

@@ -8,7 +8,7 @@ The returned value depends on the operating system and is either a string, conta
 | ------- | -----------------------------------------| -----------------------|
 | Linux   | `$HOME`                                  | /home/justjavac        |
 | macOS   | `$HOME`                                  | /Users/justjavac       |
-| Windows | `{FOLDERID_Profile}`                     | C:\Users\justjavac     |
+| Windows | `$USERPROFILE`                           | C:\Users\justjavac     |
 
 ## Usage
 
