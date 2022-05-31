@@ -1,0 +1,27 @@
+# data_dir
+
+Returns the path to the user's data directory.
+
+The returned value depends on the operating system and is either a string,
+containing a value from the following table, or `null`.
+
+| Platform | Value                                    | Example                                      |
+| -------- | ---------------------------------------- | -------------------------------------------- |
+| Linux    | `$XDG_DATA_HOME` or `$HOME`/.local/share | /home/justjavac/.local/share                 |
+| macOS    | `$HOME`/Library/Application Support      | /Users/justjavac/Library/Application Support |
+| Windows  | `$APPDATA`                               | C:\Users\justjavac\AppData\Roaming           |
+
+## Usage
+
+Requires `allow-env` permission.
+
+Returns `null` if there is no applicable directory or if any other error occurs.
+
+```ts
+import data_dir from "https://deno.land/x/dir/data_dir/mod.ts";
+
+data_dir();
+// Lin: "/home/justjavac/.local/share"
+// Mac: "/Users/justjavac/Library/Application Support"
+// Win: "C:\Users\justjavac\AppData\Roaming"
+```

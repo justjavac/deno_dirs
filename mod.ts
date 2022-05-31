@@ -1,16 +1,17 @@
 import home_dir from "./home_dir/mod.ts";
 import cache_dir from "./cache_dir/mod.ts";
 import config_dir from "./config_dir/mod.ts";
+import data_dir from "./data_dir/mod.ts";
 import download_dir from "./download_dir/mod.ts";
 
 export type DirKind =
   | "home"
   | "cache"
   | "config"
+  | "data"
   | "download";
 
 // | "executable"
-// | "data"
 // | "data_local"
 // | "audio"
 // | "desktop"
@@ -34,7 +35,7 @@ export type DirKind =
  * Returns `null` if there is no applicable directory or if any other error
  * occurs.
  *
- * Argument values: `"home"`, `"cache"`, `"config"`, `"download"`,
+ * Argument values: `"home"`, `"cache"`, `"config"`, `"data"`, `"download"`,
  *
  * `"home"`
  *
@@ -70,11 +71,11 @@ export type DirKind =
  *
  * `"data"`
  *
- * |Platform | Value                                    | Example                                      |
- * | ------- | ---------------------------------------- | -------------------------------------------- |
- * | Linux   | `$XDG_DATA_HOME` or `$HOME`/.local/share | /home/justjavac/.local/share                 |
- * | macOS   | `$HOME`/Library/Application Support      | /Users/justjavac/Library/Application Support |
- * | Windows | `{FOLDERID_RoamingAppData}`              | C:\Users\justjavac\AppData\Roaming           |
+ * | Platform | Value                                    | Example                                      |
+ * | -------- | ---------------------------------------- | -------------------------------------------- |
+ * | Linux    | `$XDG_DATA_HOME` or `$HOME`/.local/share | /home/justjavac/.local/share                 |
+ * | macOS    | `$HOME`/Library/Application Support      | /Users/justjavac/Library/Application Support |
+ * | Windows  | `$APPDATA`                               | C:\Users\justjavac\AppData\Roaming           |
  *
  * `"data_local"`
  *
@@ -172,6 +173,8 @@ export default function dir(kind: DirKind): string | null {
       return cache_dir();
     case "config":
       return config_dir();
+    case "data":
+      return data_dir();
     case "download":
       return download_dir();
     default:
