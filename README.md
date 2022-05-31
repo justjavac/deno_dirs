@@ -25,10 +25,11 @@ Requires `allow-env` permission.
 
 Returns `null` if there is no applicable directory or if any other error occurs.
 
-Argument values: `"home"`, `"cache"`, `"config"`, `"data"`, `"download"`,
+Argument values: `"home"`, `"cache"`, `"config"`, `"data"`, `"data_local"`,
+`"download"`,
 
-Not yet implemented: `"executable"`, `"data_local"`, `"audio"`, `"desktop"`,
-`"document"` `"font"`, `"picture"`, `"public"`, `"template"`, `"tmp"`, `"video"`
+Not yet implemented: `"executable"`, `"audio"`, `"desktop"`, `"document"`
+`"font"`, `"picture"`, `"public"`, `"template"`, `"tmp"`, `"video"`
 
 `"home"`
 
@@ -76,7 +77,7 @@ Not yet implemented: `"executable"`, `"data_local"`, `"audio"`, `"desktop"`,
 | -------- | ---------------------------------------- | -------------------------------------------- |
 | Linux    | `$XDG_DATA_HOME` or `$HOME`/.local/share | /home/justjavac/.local/share                 |
 | macOS    | `$HOME`/Library/Application Support      | /Users/justjavac/Library/Application Support |
-| Windows  | `{FOLDERID_LocalAppData}`                | C:\Users\justjavac\AppData\Local             |
+| Windows  | `$LOCALAPPDATA`                          | C:\Users\justjavac\AppData\Local             |
 
 `"audio"`
 
