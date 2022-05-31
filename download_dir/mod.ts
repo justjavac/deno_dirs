@@ -1,4 +1,4 @@
-import { join } from "https://deno.land/std@0.115.1/path/mod.ts";
+import { join } from "https://deno.land/std@0.141.0/path/mod.ts";
 import home_dir from "../home_dir/mod.ts";
 
 /** Returns the path to the user's download directory.
@@ -13,6 +13,11 @@ import home_dir from "../home_dir/mod.ts";
  * | Windows | `$USERPROFILE\Downloads` | C:\Users\justjavac\Downloads |
  */
 export default function download_dir(): string | null {
+  if (Deno.build.os === 'linux') {
+    const downloadDir = Deno.env.get("XDG_DOWNLOAD_DIR");
+    if (downloadDir) return downloadDir;
+  }
+
   const homeDir = home_dir();
 
   if (!homeDir) {
