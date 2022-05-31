@@ -2,13 +2,14 @@
 
 Returns the path to the user's download directory.
 
-The returned value depends on the operating system and is either a string, containing a value from the following table, or `null`.
+The returned value depends on the operating system and is either a string,
+containing a value from the following table, or `null`.
 
-|Platform | Value                    | Example                      |
-| ------- | ----------------------   | ---------------------------- |
-| Linux   | `XDG_DOWNLOAD_DIR`       | /home/justjavac/Downloads    |
-| macOS   | `$HOME`/Downloads        | /Users/justjavac/Downloads   |
-| Windows | `$USERPROFILE`\Downloads | C:\Users\justjavac\Downloads |
+| Platform | Value                    | Example                      |
+| -------- | ------------------------ | ---------------------------- |
+| Linux    | `XDG_DOWNLOAD_DIR`       | /home/justjavac/Downloads    |
+| macOS    | `$HOME`/Downloads        | /Users/justjavac/Downloads   |
+| Windows  | `$USERPROFILE`\Downloads | C:\Users\justjavac\Downloads |
 
 ## Usage
 

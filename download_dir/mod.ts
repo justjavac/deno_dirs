@@ -13,7 +13,7 @@ import home_dir from "../home_dir/mod.ts";
  * | Windows | `$USERPROFILE\Downloads` | C:\Users\justjavac\Downloads |
  */
 export default function download_dir(): string | null {
-  if (Deno.build.os === 'linux') {
+  if (Deno.build.os === "linux") {
     const downloadDir = Deno.env.get("XDG_DOWNLOAD_DIR");
     if (downloadDir) return downloadDir;
   }

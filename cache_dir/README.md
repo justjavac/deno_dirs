@@ -5,11 +5,11 @@ Returns the path to the user's cache directory.
 The returned value depends on the operating system and is either a string,
 containing a value from the following table, or `null`.
 
-|Platform | Value                               | Example                          |
-| ------- | ----------------------------------- | -------------------------------- |
-| Linux   | `$XDG_CACHE_HOME` or `$HOME`/.cache | /home/justjavac/.cache           |
-| macOS   | `$HOME`/Library/Caches              | /Users/justjavac/Library/Caches  |
-| Windows | `$LOCALAPPDATA`                     | C:\Users\justjavac\AppData\Local |
+| Platform | Value                               | Example                          |
+| -------- | ----------------------------------- | -------------------------------- |
+| Linux    | `$XDG_CACHE_HOME` or `$HOME`/.cache | /home/justjavac/.cache           |
+| macOS    | `$HOME`/Library/Caches              | /Users/justjavac/Library/Caches  |
+| Windows  | `$LOCALAPPDATA`                     | C:\Users\justjavac\AppData\Local |
 
 ## Usage
 
