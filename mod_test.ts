@@ -12,6 +12,12 @@ Deno.test("test that dir return value is not null and length is more than 0", ()
   const config = dir("config");
   assert(config?.length && config.length > 0);
 
+  const data = dir("data");
+  assert(data?.length && data.length > 0);
+
+  const data_local = dir("data_local");
+  assert(data_local?.length && data_local.length > 0);
+
   const download = dir("download");
   assert(download?.length && download.length > 0);
 });
