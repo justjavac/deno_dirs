@@ -4,6 +4,7 @@ import config_dir from "./config_dir/mod.ts";
 import data_dir from "./data_dir/mod.ts";
 import data_local_dir from "./data_local_dir/mod.ts";
 import download_dir from "./download_dir/mod.ts";
+import tmp_dir from "./tmp_dir/mod.ts";
 
 export type DirKind =
   | "home"
@@ -11,7 +12,8 @@ export type DirKind =
   | "config"
   | "data"
   | "data_local"
-  | "download";
+  | "download"
+  | "tmp";
 
 // | "executable"
 // | "audio"
@@ -180,6 +182,8 @@ export default function dir(kind: DirKind): string | null {
       return data_local_dir();
     case "download":
       return download_dir();
+    case "tmp":
+      return tmp_dir();
     default:
       return null;
   }

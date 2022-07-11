@@ -26,10 +26,10 @@ Requires `allow-env` permission.
 Returns `null` if there is no applicable directory or if any other error occurs.
 
 Argument values: `"home"`, `"cache"`, `"config"`, `"data"`, `"data_local"`,
-`"download"`,
+`"download"`,`"tmp"`
 
 Not yet implemented: `"executable"`, `"audio"`, `"desktop"`, `"document"`
-`"font"`, `"picture"`, `"public"`, `"template"`, `"tmp"`, `"video"`
+`"font"`, `"picture"`, `"public"`, `"template"`, `"video"`
 
 `"home"`
 
