@@ -9,7 +9,7 @@
  * | macOS    | `TMPDIR`   | /var/folders/xx/xxxxxx/T/              |
  * | Windows  | `{TMP}`    | C:\Users\justjavac\AppData\Local\Temp  |
  */
-export default function home_dir(): string | null {
+export default function tmp_dir(): string | null {
   switch (Deno.build.os) {
     case "linux": {
       const xdg = Deno.env.get("XDG_RUNTIME_DIR");
