@@ -1,10 +1,5 @@
 # deno_dirs
 
-[![tag](https://img.shields.io/github/release/justjavac/deno_dirs)](https://github.com/justjavac/deno_dirs/releases)
-[![Build Status](https://github.com/justjavac/deno_dirs/workflows/ci/badge.svg?branch=master)](https://github.com/justjavac/deno_dirs/actions)
-[![license](https://img.shields.io/github/license/justjavac/deno_dirs)](https://github.com/justjavac/deno_dirs/blob/master/LICENSE)
-[![](https://img.shields.io/badge/deno-v1.3-green.svg)](https://github.com/denoland/deno)
-
 Returns the user and platform specific directories.
 
 > _In v1.1.2(2020.06.26), Deno
