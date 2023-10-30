@@ -1,4 +1,4 @@
-import { join } from "https://deno.land/std@0.141.0/path/mod.ts";
+import { join } from "https://deno.land/std@0.204.0/path/join.ts";
 import home_dir from "../home_dir/mod.ts";
 
 /** Returns the path to the user's download directory.
