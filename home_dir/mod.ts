@@ -17,4 +17,5 @@ export default function home_dir(): string | null {
     case "windows":
       return Deno.env.get("USERPROFILE") ?? null;
   }
+  return null;
 }

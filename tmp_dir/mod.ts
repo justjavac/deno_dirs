@@ -31,4 +31,5 @@ export default function tmp_dir(): string | null {
     case "windows":
       return Deno.env.get("TMP") ?? Deno.env.get("TEMP") ?? null;
   }
+  return null;
 }
