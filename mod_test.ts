@@ -1,4 +1,4 @@
-import { assert } from "https://deno.land/std@0.150.0/testing/asserts.ts";
+import { assert } from "https://deno.land/std@0.204.0/assert/assert.ts";
 
 import dir from "./mod.ts";
 
